@@ -1,0 +1,26 @@
+---
+import TestimonialCard from "./testimonial_card.astro";
+
+const apiUrl = "https://djfmjkvahbvsswxqroka.supabase.co/rest/v1/testimonials?approved=is.true";
+
+const apiKey =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRqZm1qa3ZhaGJ2c3N3eHFyb2thIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE5ODMyNzcsImV4cCI6MTk5NzU1OTI3N30.DGMKrUIX5IO6XZIAM86R4pkG2R7XJ3-V8mhasSpmjp8";
+
+const response = await fetch(apiUrl, {
+  method: "GET",
+  headers: {
+    apikey: apiKey,
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  },
+});
+const testimonial = await response.json();
+---
+
+<section>
+  {
+    testimonial.map((indhold) => {
+      return <TestimonialCard navn={indhold.name} overskrift={indhold.headline} text={indhold.text} />;
+    })
+  }
+</section>
