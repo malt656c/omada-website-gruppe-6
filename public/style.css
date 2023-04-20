@@ -7,7 +7,7 @@
   --pale_pink: #f4a9c6;
   --blueish_grey: #b8d5cb;
   --pale_violet: #a89ef8;
-  --light_beige: #ffebd2;
+  --light_beige: #FFFEF2;
 }
 body {
   background-color: var(--light_beige);
