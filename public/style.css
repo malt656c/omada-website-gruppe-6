@@ -7,9 +7,9 @@
   --pale_pink: #f4a9c6;
   --blueish_grey: #b8d5cb;
   --pale_violet: #a89ef8;
-  --light_beige: #FFFEF2;
+  --light_beige: #fffef2;
 }
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -22,5 +22,28 @@ h1 {
   font-style: normal;
   font-size: 3rem;
   color: var(--bright_red);
+  text-align: center;
+}
+
+.aboutUsH1 {
+}
+
+.aboutUsP {
+  margin-left: 12%;
+  margin-right: 12%;
+  line-height: 260%;
+  margin-bottom: 2%;
+}
+
+.top {
+  text-align: center;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+h2 {
+  font-family: "aviano-sans", sans-serif;
+  margin-left: 10%;
+  margin-right: 10%;
   text-align: center;
 }
