@@ -7,14 +7,15 @@
   --pale_pink: #f4a9c6;
   --blueish_grey: #b8d5cb;
   --pale_violet: #a89ef8;
-  --light_beige: #FFFEF2;
+  --light_beige: #fffef2;
 }
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
+  background-color: var(  --light_beige);
 }
 h1 {
   font-family: "aviano-sans", sans-serif;

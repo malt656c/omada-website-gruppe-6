@@ -1,0 +1,72 @@
+---
+import Cirkler from "../Komponenter/Cirkler.astro";
+import Undernav from "../Komponenter/Undernav.astro";
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/mku2eml.css" />
+    <title>About Us</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="aboutUsH1">About Us</h1>
+ <Cirkler />
+      <Undernav />
+
+    </header>
+    <main>
+      <h2>Omada Wine & Deli</h2>
+      <p class="top">Thirsty? Peckish? Curious? We’ve got you covered!</p>
+      <p class="aboutUsP">Omada Wine & Deli in Østerbro, Copenhagen, is the new omada.wine headquarters – and our brand new bottle shop and deli.</p>
+      <p class="aboutUsP">
+        Here, we curate your simple needs for life’s better necessities; wine & food. In the shop you can find the complete line up of natural wine, cider and other mixed fermentations that you know from omada.wine. And you may even enjoy a glass of
+        wine before you decide which bottle to take home.
+      </p>
+      <p class="aboutUsP">
+        However, Omada Wine & Deli is much more than just a bottle shop. We present a careful selection of local farmers’ cheese, charcuterie, sourdough bread and high quality groceries such as olive oil, vinegar, canned fish, spices and much more.
+        From people we work with directly or from people we trust. You can also join in on one of our open wine tastings and sample the curated selection of natural wines in omada.wine’s monthly subscription box. Or come by for a plate of food and a
+        glass of wine whenever one of our friends from the industry is cooking a “plat du jour”. And whenever we have a winemaker in town, Omada Wine & Deli is the place to be!
+      </p>
+    </main>
+    <footer></footer>
+
+    <p></p>
+  </body>
+</html>
+
+<style>
+
+.aboutUsH1 {
+  color: var(--pale_violet);
+  font-size: 5rem;
+    margin-top: 2em;
+}
+
+.aboutUsP {
+  margin-left: 12%;
+  margin-right: 12%;
+  line-height: 260%;
+  margin-bottom: 2%;
+}
+
+.top {
+  text-align: center;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+h2 {
+  font-family: "aviano-sans", sans-serif;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
+
+</style>
