@@ -48,30 +48,19 @@ import Deligoods from "../Komponenter/Deligoods.astro";
         <div>
           <h2>NEWS & EVENTS</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            rem, aspernatur ab ipsa nostrum quod harum eos assumenda repellat
-            iure? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Autem, error. Odit maxime consequuntur veniam voluptate
-            reprehenderit mollitia necessitatibus quaerat pariatur.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam rem, aspernatur ab ipsa nostrum quod harum eos assumenda repellat iure? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, error. Odit maxime consequuntur
+            veniam voluptate reprehenderit mollitia necessitatibus quaerat pariatur.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            ullam aspernatur illo ducimus nam, repellendus aperiam eveniet porro
-            magni minima, cumque laudantium? Voluptatum beatae optio vel ex sint
-            quia itaque!
-          </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam aspernatur illo ducimus nam, repellendus aperiam eveniet porro magni minima, cumque laudantium? Voluptatum beatae optio vel ex sint quia itaque!</p>
           <a href="">Events</a>
         </div>
-        <img src="src/img/taste1.png" alt="" />
+        <img src="src/img/kort.webp" alt="kort" />
       </div>
       <Cirkler />
       <div class="center">
         <h2 class="Deli">DELI GOODS</h2>
         <h3>THIRSTY? PECKISH? CURIOUS? WE'VE GOT YOU COVERED!</h3>
-        <p>
-          Omada Wine & Deli feeds your simple needs for life's better
-          necessities; wine & food.
-        </p>
+        <p>Omada Wine & Deli feeds your simple needs for life's better necessities; wine & food.</p>
         <a href="">GO TO WEBSHOP</a>
       </div>
       <Deligoods />
@@ -91,51 +80,43 @@ import Deligoods from "../Komponenter/Deligoods.astro";
     position: relative;
   }
   .circle {
-    width: 419px;
-    height: 419px;
-    border: 20px solid red;
+    width: 27vw;
+    height: 27vw;
+    outline: 1vw solid red;
     border-radius: 50%;
     background-color: white;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
   }
 
   .circleText {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 1 rem;
+    column-gap: 2rem;
     font-size: 24px;
     font-weight: bold;
-    position: relative;
     top: 8rem;
     left: 2.2rem;
   }
-  @media (max-width: 900px) {
-    .circle {
-      width: 171px;
-      height: 171px;
-      border: 20px solid red;
-      border-radius: 50%;
-      background-color: white;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    .circleText {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 1 rem;
-
-      font-size: 11px;
-      font-weight: bold;
-      position: relative;
-      top: 2rem;
-      left: 0.6rem;
-    }
+  .circleText p {
+    font-family: "aviano-sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #526baf;
+    font-size: 2vw;
   }
+
+  p {
+    font-family: "raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+  }
+
   .container img {
     width: 100%;
     height: auto;
@@ -153,13 +134,17 @@ import Deligoods from "../Komponenter/Deligoods.astro";
   }
   h1 {
     color: black;
-    font-size: 5rem;
-    margin-top: 2em;
+
+    font-size: 7vw;
+    padding: 5rem;
   }
   main h2 {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 2rem;
+    font-family: "aviano-sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
   main p {
     margin-bottom: 2rem;
@@ -172,27 +157,23 @@ import Deligoods from "../Komponenter/Deligoods.astro";
   .grid_3-1 div {
     margin-left: 10%;
   }
-  @media (max-width: 900px) {
-    .grid_3-1 {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: rem;
-    }
-  }
+
   main a {
     text-decoration: none;
     border-width: 3px;
     border-style: solid;
-    border-color: #c72828;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    color: red;
+    border-color: var(--bright_red);
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    color: var(--bright_red);
     width: 9rem;
     text-align: center;
     display: block;
+    font-family: "aviano-sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
+
   .Deli {
     color: var(--mustard);
   }
@@ -200,6 +181,9 @@ import Deligoods from "../Komponenter/Deligoods.astro";
     color: var(--bright_red);
     margin-top: 3rem;
     margin-bottom: 2rem;
+    font-family: "aviano-sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
   .center {
     text-align: center;
@@ -215,5 +199,33 @@ import Deligoods from "../Komponenter/Deligoods.astro";
   }
   img {
     width: 100%;
+  }
+
+  @media (max-width: 900px) {
+    .grid_3-1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: rem;
+    }
+  }
+  @media (max-width: 900px) {
+    .circle {
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .circleText {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1 rem;
+
+      font-weight: bold;
+
+      top: 2rem;
+      left: 0.6rem;
+    }
   }
 </style>
