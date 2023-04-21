@@ -11,16 +11,18 @@
   </div>
 </div>
 <style>
-  .container {
-    width: 100%;
-    height: ;
-    overflow-x: scroll;
-    white-space: nowrap;
-    margin-top: 5rem;
-  }
-
   .content {
-    display: inline-block;
-    max-height: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    height: 300px;
+    overflow-x: scroll;
+    display: flex;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    margin: auto;
+    margin-block: 1rem;
+  }
+  img {
+    scroll-snap-align: center;
   }
 </style>

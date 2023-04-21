@@ -1,4 +1,4 @@
-<div class="slider">
+
   <div class="track">
     <img class="slide" src="src/img/taste1.png" alt="" />
     <img class="slide" src="src/img/taste1.png" alt="" />
@@ -8,32 +8,24 @@
     <img class="slide" src="src/img/taste1.png" alt="" />
     <img class="slide" src="src/img/taste1.png" alt="" />
   </div>
-</div>
 <style>
-  .slider {
-    display: flex;
-    height: auto;
-    margin: auto;
-  }
 
-  .slider .track {
+.track {
     display: flex;
 
-    -webkit-animation: scroll 20s linear infinite;
     gap: 1rem;
+    overflow-x: hidden;
   }
+  img{
+    animation: scroll 20s linear infinite;
 
-  .slider .slide {
-    width: 100%;
-    height: auto;
   }
-
   @keyframes scroll {
-    0% {
-      transform: translateX(0px);
-    }
     100% {
-      transform: translateX(calc(-60rem));
+      transform: translateX(-60rem);
     }
   }
 </style>
+<script>
+
+</script>
