@@ -1,0 +1,36 @@
+<div>
+  <a href="">DELI GOODS</a>
+  <a href="">TASTING EVENTS</a>
+  <a href="">ABOUT US</a>
+</div>
+<style>
+  div {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 13rem;
+  }
+  a {
+    text-decoration: none;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #c72828;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: red;
+    width: 9rem;
+    text-align: center;
+  }
+  @media (max-width: 1084px) {
+    div {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      place-items: center;
+      margin-bottom: 5rem;
+    }
+  }
+</style>

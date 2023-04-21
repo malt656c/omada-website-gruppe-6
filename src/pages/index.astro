@@ -1,17 +1,219 @@
 ---
+import Cirkler from "../Komponenter/Cirkler.astro";
+import Undernav from "../Komponenter/Undernav.astro";
+import Slider from "../Komponenter/Slider.astro";
+import Deligoods from "../Komponenter/Deligoods.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="/style.css">
-		<link rel="stylesheet" href="https://use.typekit.net/mku2eml.css">
-		<title>Astro</title>
-	</head>
-	<body>
-<h1>Omada Wine & Deli</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/mku2eml.css" />
+    <link rel="stylesheet" href="/public/style.css" />
+    <title>Astro</title>
+  </head>
+  <body>
+    <header>
+      <h1>Omada Wine & Deli</h1>
+      <Cirkler />
+      <Undernav />
+
+      <div id="forside">
+        <div class="container">
+          <img src="src/img/baggrund.png" alt="" />
+          <div class="circle">
+            <div class="circleText">
+              <p>Wednesday</p>
+              <p>11-20</p>
+              <p>Thursday</p>
+              <p>11-20</p>
+              <p>Friday</p>
+              <p>11-20</p>
+              <p>saturday</p>
+              <p>11-20</p>
+              <p>sunday</p>
+              <p>11-20</p>
+            </div>
+          </div>
+        </div>
+        <div class="linje"></div>
+      </div>
+    </header>
+    <main>
+      <div class="grid_3-1">
+        <div>
+          <h2>NEWS & EVENTS</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+            rem, aspernatur ab ipsa nostrum quod harum eos assumenda repellat
+            iure? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Autem, error. Odit maxime consequuntur veniam voluptate
+            reprehenderit mollitia necessitatibus quaerat pariatur.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            ullam aspernatur illo ducimus nam, repellendus aperiam eveniet porro
+            magni minima, cumque laudantium? Voluptatum beatae optio vel ex sint
+            quia itaque!
+          </p>
+          <a href="">Events</a>
+        </div>
+        <img src="src/img/taste1.png" alt="" />
+      </div>
+      <Cirkler />
+      <div class="center">
+        <h2 class="Deli">DELI GOODS</h2>
+        <h3>THIRSTY? PECKISH? CURIOUS? WE'VE GOT YOU COVERED!</h3>
+        <p>
+          Omada Wine & Deli feeds your simple needs for life's better
+          necessities; wine & food.
+        </p>
+        <a href="">GO TO WEBSHOP</a>
+      </div>
+      <Deligoods />
+      <Cirkler />
+    </main>
+    <Slider />
+  </body>
 </html>
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    position: relative;
+  }
+  .circle {
+    width: 419px;
+    height: 419px;
+    border: 20px solid red;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .circleText {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1 rem;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    top: 8rem;
+    left: 2.2rem;
+  }
+  @media (max-width: 900px) {
+    .circle {
+      width: 171px;
+      height: 171px;
+      border: 20px solid red;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .circleText {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1 rem;
+
+      font-size: 11px;
+      font-weight: bold;
+      position: relative;
+      top: 2rem;
+      left: 0.6rem;
+    }
+  }
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+  .linje {
+    margin-top: 5rem;
+    border: 0.1rem solid red;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2rem;
+  }
+  body {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  h1 {
+    color: black;
+    font-size: 5rem;
+    margin-top: 2em;
+  }
+  main h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  main p {
+    margin-bottom: 2rem;
+  }
+  .grid_3-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+  .grid_3-1 div {
+    margin-left: 10%;
+  }
+  @media (max-width: 900px) {
+    .grid_3-1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: rem;
+    }
+  }
+  main a {
+    text-decoration: none;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #c72828;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: red;
+    width: 9rem;
+    text-align: center;
+    display: block;
+  }
+  .Deli {
+    color: var(--mustard);
+  }
+  h3 {
+    color: var(--bright_red);
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  .center {
+    text-align: center;
+  }
+  .center a {
+    margin-left: auto;
+    margin-right: auto;
+    color: red;
+    width: fit-content;
+  }
+  .center p {
+    margin-bottom: 4rem;
+  }
+  img {
+    width: 100%;
+  }
+</style>
