@@ -26,6 +26,7 @@ h1 {
 }
 
 .aboutUsH1 {
+  color: var(--pale_violet);
 }
 
 .aboutUsP {
