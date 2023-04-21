@@ -1,4 +1,52 @@
 <div class="container">
-  <div class="farve"></div>
-  <p class="måned">måned</p>
+  <div>
+    <div class="flex">
+      <p class="måned">APR</p>
+
+      <p class="tid">16:00 - 20:00</p>
+      <p class="tid1">21</p>
+
+      <p class="måned1">Plat du jour: Chicken Fricassee</p>
+    </div>
+  </div>
+
+  <div></div>
+  <div>
+    <div class="flex">
+      <p class="måned">May</p>
+
+      <p class="tid">12:00 - 20:00</p>
+      <p class="tid1">25</p>
+
+      <p class="måned1">Plat du jour: Brabecue & wheat bread</p>
+    </div>
+  </div>
+
+  <style>
+    .container {
+      width: fit-content;
+      display: block;
+      margin-top: 5rem;
+      border: 0px 0px 10px 10px;
+    }
+    .flex {
+      text-align: left;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 0.1rem;
+      margin-bottom: 1rem;
+    }
+    .måned,
+    .tid {
+      font-size: 0.6rem;
+    }
+    .linje {
+      margin-top: 5rem;
+      border: 0.1rem solid red;
+
+      margin-bottom: 2rem;
+      height: 10rem;
+      width: 1px;
+    }
+  </style>
 </div>
