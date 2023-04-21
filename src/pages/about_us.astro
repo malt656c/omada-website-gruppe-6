@@ -1,7 +1,6 @@
 ---
 import Cirkler from "../Komponenter/Cirkler.astro";
 import Undernav from "../Komponenter/Undernav.astro";
-
 ---
 
 <html lang="en">
@@ -17,9 +16,8 @@ import Undernav from "../Komponenter/Undernav.astro";
   <body>
     <header>
       <h1 class="aboutUsH1">About Us</h1>
- <Cirkler />
+      <Cirkler />
       <Undernav />
-
     </header>
     <main>
       <h2>Omada Wine & Deli</h2>
@@ -42,40 +40,45 @@ import Undernav from "../Komponenter/Undernav.astro";
 </html>
 
 <style>
-
   .aboutUsH1 {
     color: var(--pale_violet);
-    font-size: 5rem;
-      margin-top: 2em;
+    text-align: center;
+    font-size: 10vw;
+    padding: 5rem;
   }
-  
+
   p {
-      font-size: 1.3rem;
+    font-size: 1.3rem;
+    font-family: "raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
-  
+
   .aboutUsP {
     margin-left: 12%;
     margin-right: 12%;
     line-height: 260%;
     margin-bottom: 2%;
   }
-  
+
   .top {
     text-align: center;
     margin-top: 4%;
     margin-bottom: 4%;
   }
-  
+
   h2 {
     font-family: "aviano-sans", sans-serif;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-inline: 10%;
     text-align: center;
     font-size: 2.5rem;
-    margin-top: -7rem;
+
     margin-bottom: 5rem;
   }
-  
-  </style>
-  
-  
+
+  @media (max-width: 1084px) {
+    h2 {
+      margin-top: 1rem;
+    }
+  }
+</style>
