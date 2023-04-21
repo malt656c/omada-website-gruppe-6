@@ -10,7 +10,6 @@
   --light_beige: #ffebd2;
 }
 body {
-  background-color: var(--light_beige);
 }
 h1 {
   font-family: "aviano-sans", sans-serif;
