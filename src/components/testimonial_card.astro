@@ -4,6 +4,60 @@ const { overskrift, navn, text } = Astro.props;
 
 <article>
   <h3>{overskrift}</h3>
+  <q>{text}</q>
   <h4>{navn}</h4>
-  <p>{text}</p>
 </article>
+
+<style>
+  article {
+    display: grid;
+    max-width: 500px;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+  h3 {
+    font-family: "aviano-sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--bright_red);
+    font-size: 1.5rem;
+    text-indent: 1.5rem;
+  }
+  q {
+    place-items: center;
+    font-family: "forma-djr-text", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    padding: 2rem;
+    position: relative;
+  }
+  q::before,
+  q::after {
+    color: var(--bright_red);
+    font-size: 4rem;
+    position: absolute;
+    line-height: 100%;
+    z-index: -1;
+    filter: opacity(70%);
+
+  }
+  q::before {
+    top: 0;
+    left: 0;
+  }
+  q::after {
+    bottom: 0;
+    right: 0;
+  }
+  h4 {
+    font-family: "aviano-sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    filter: opacity(70%);
+    margin-left: auto;
+  }
+  h4::before {
+    content: "- ";
+  }
+</style>

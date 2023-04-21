@@ -9,6 +9,11 @@
   --pale_violet: #a89ef8;
   --light_beige: #FFFEF2;
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background-color: var(--light_beige);
 }
