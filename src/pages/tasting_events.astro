@@ -4,6 +4,8 @@ import Tastingeventsheader from "../components/tastingeventsheader.astro";
 import Eventscontent from "../components/eventscontent.astro";
 import Circles from "../components/circles.astro";
 import Undernav from "../components/Undernav.astro";
+import Wines from "../components/wines.astro";
+import BarLinje from "../components/bar_linje.astro";
 ---
 
 <html lang="en">
@@ -20,7 +22,7 @@ import Undernav from "../components/Undernav.astro";
 
   <body>
     <header>
-      <Menu/>
+      <Menu />
       <Tastingeventsheader />
       <Circles />
       <Undernav />
@@ -29,4 +31,8 @@ import Undernav from "../components/Undernav.astro";
       <Eventscontent />
     </main>
   </body>
+  <footer>
+    <Wines />
+    <BarLinje />
+  </footer>
 </html>

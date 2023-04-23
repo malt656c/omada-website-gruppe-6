@@ -2,6 +2,8 @@
 import Menu from "../components/menu.astro";
 import Undernav from "../components/Undernav.astro";
 import Circles from "../components/circles.astro";
+import Wines from "../components/wines.astro";
+import BarLinje from "../components/bar_linje.astro";
 ---
 
 <html lang="en">
@@ -16,7 +18,7 @@ import Circles from "../components/circles.astro";
   </head>
   <body>
     <header>
-      <Menu/>
+      <Menu />
       <h1 class="aboutUsH1">About Us</h1>
       <Circles />
       <Undernav />
@@ -35,7 +37,10 @@ import Circles from "../components/circles.astro";
         glass of wine whenever one of our friends from the industry is cooking a “plat du jour”. And whenever we have a winemaker in town, Omada Wine & Deli is the place to be!
       </p>
     </main>
-    <footer></footer>
+    <footer>
+      <Wines />
+      <BarLinje />
+    </footer>
 
     <p></p>
   </body>
