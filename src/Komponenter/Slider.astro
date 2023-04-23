@@ -1,11 +1,16 @@
 <div class="track">
-  <img class="slide1" src="src/img/taste1.png" alt="" />
-  <img class="slide2" src="src/img/taste1.png" alt="" />
-  <img class="slide3" src="src/img/taste1.png" alt="" />
-  <img class="slide4" src="src/img/taste1.png" alt="" />
-  <img class="slide5" src="src/img/taste1.png" alt="" />
-  <img class="slide6" src="src/img/taste1.png" alt="" />
-  <img class="slide7" src="src/img/taste1.png" alt="" />
+  <img class="slide1" src="src/img/barr.webp" alt="" />
+  <img class="slide2" src="src/img/bistro.webp" alt="" />
+  <img class="slide3" src="src/img/gaard.webp" alt="" />
+  <img class="slide4" src="src/img/kobyen.webp" alt="" />
+  <img class="slide5" src="src/img/kor.webp" alt="" />
+  <img class="slide6" src="src/img/lago.webp" alt="" />
+  <img class="slide7" src="src/img/popl.webp" alt="" />
+  <img class="slide8" src="src/img/omegn.webp" alt="" />
+  <img class="slide9" src="src/img/bardok.webp" alt="" />
+  <img class="slide10" src="src/img/bardok.webp" alt="" />
+  <img class="slide11" src="src/img/taarn.webp" alt="" />
+  <img class="slide11" src="src/img/baest.webp" alt="" />
 </div>
 <style>
   .track {
@@ -16,11 +21,11 @@
     height: 20rem;
   }
   img {
-    height: 20rem;
+    width: 20rem;
     position: absolute;
     right: 0;
-  transform: translateX(20rem);
-    animation: scroll 14s linear infinite;
+    transform: translateX(20rem);
+    animation: scroll 24s linear infinite;
   }
   @keyframes scroll {
     100% {
@@ -34,7 +39,7 @@
   console.log(track.children);
   for (let step = 0; step < track.children.length; step++) {
     let billede = track.children[step];
-      billede.style.animationDelay = (step * 2) + "s";
-      console.log(billede);
+    billede.style.animationDelay = step * 4 + "s";
+    console.log(billede);
   }
 </script>
