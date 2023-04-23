@@ -3,10 +3,11 @@ import Cirkler from "../components/Cirkler.astro";
 import Undernav from "../components/Undernav.astro";
 import Slider from "../components/Slider.astro";
 import Deligoods from "../components/Deligoods.astro";
-import News from "../components/News.astro";
-import Menu from "../components/menu.astro"
+import Menu from "../components/menu.astro";
 import Circles from "../components/circles.astro";
 import OpenTimesSection from "../components/openTimesSection.astro";
+import Linje from "../components/linje.astro";
+import NewsAndEventsSection from "../components/newsAndEventsSection.astro";
 ---
 
 <html lang="en">
@@ -22,35 +23,17 @@ import OpenTimesSection from "../components/openTimesSection.astro";
   </head>
   <body>
     <header>
-<Menu/>
+      <Menu />
       <h1>Omada Wine & Deli</h1>
       <Circles />
       <Undernav />
-
-      <div id="forside">
-<OpenTimesSection/>
-        <div class="linje"></div>
-      </div>
+      <OpenTimesSection />
+      <Linje />
     </header>
     <main>
-      <div class="grid_3-1">
-        <div>
-          <h2>NEWS & EVENTS</h2>
-          <p>
-            The name Omada comes from the Greek word for "team" or "group", reflecting the sense of community and camaraderie that we strive to create here. Our wine tastings, cultural events, and social gatherings are designed to bring people
-            together and foster connections over shared interests.
-          </p>
-          <p>
-            Join in on one of our open wine tastings and sample the curated selection of natural wines in omada.wine’s monthly subscription box. Or come by for a plate of food and a glass of wine whenever one of our friends from the industry is
-            cooking a “plat du jour”. And whenever we have a winemaker in town, Omada Wine & Deli is the place to be! Follow our events here on our website, instagram & facebook!
-          </p>
-          <a href="">Events</a>
-          <News />
-        </div>
-        <img src="src/img/kort.webp" alt="kort" />
-      </div>
+      <NewsAndEventsSection />
       <Cirkler />
-      <div class="center">
+      <div id="Produkter">
         <h2 class="Deli">DELI GOODS</h2>
         <h3>THIRSTY? PECKISH? CURIOUS? WE'VE GOT YOU COVERED!</h3>
         <p>Omada Wine & Deli feeds your simple needs for life's better necessities; wine & food.</p>
@@ -64,13 +47,6 @@ import OpenTimesSection from "../components/openTimesSection.astro";
 </html>
 
 <style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
- 
-
   p {
     font-family: "raleway", sans-serif;
     font-weight: 400;
@@ -78,20 +54,8 @@ import OpenTimesSection from "../components/openTimesSection.astro";
     font-size: 20px;
   }
 
-  .container img {
-    width: 100%;
-    height: auto;
-  }
-  .linje {
-    margin-top: 5rem;
-    border: 0.1rem solid red;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 2rem;
-  }
   h1 {
     color: black;
-
     font-size: 7vw;
     padding: 5rem;
   }
@@ -103,18 +67,6 @@ import OpenTimesSection from "../components/openTimesSection.astro";
     font-weight: 500;
     font-style: normal;
   }
-  main p {
-    margin-bottom: 2rem;
-  }
-  .grid_3-1 {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-  }
-  .grid_3-1 div {
-    margin-left: 10%;
-  }
-
   main a {
     text-decoration: none;
     border-width: 3px;
@@ -150,28 +102,19 @@ import OpenTimesSection from "../components/openTimesSection.astro";
     font-weight: 500;
     font-style: normal;
   }
-  .center {
+  #Produkter {
     text-align: center;
   }
-  .center a {
+  #Produkter a {
     margin-left: auto;
     margin-right: auto;
     color: red;
     width: fit-content;
   }
-  .center p {
+  #Produkter p {
     margin-bottom: 4rem;
   }
   img {
     width: 100%;
   }
-
-  @media (max-width: 900px) {
-    .grid_3-1 {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: rem;
-    }
-  }
-
 </style>
