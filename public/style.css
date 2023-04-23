@@ -16,6 +16,8 @@
 }
 body {
   background-color: var(  --light_beige);
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 h1 {
   font-family: "aviano-sans", sans-serif;

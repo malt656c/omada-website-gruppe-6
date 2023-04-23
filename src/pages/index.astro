@@ -1,11 +1,12 @@
 ---
-import Cirkler from "../Komponenter/Cirkler.astro";
-import Undernav from "../Komponenter/Undernav.astro";
-import Slider from "../Komponenter/Slider.astro";
-import Deligoods from "../Komponenter/Deligoods.astro";
-import News from "../Komponenter/News.astro";
+import Cirkler from "../components/Cirkler.astro";
+import Undernav from "../components/Undernav.astro";
+import Slider from "../components/Slider.astro";
+import Deligoods from "../components/Deligoods.astro";
+import News from "../components/News.astro";
 import Menu from "../components/menu.astro"
 import Circles from "../components/circles.astro";
+import OpenTimesSection from "../components/openTimesSection.astro";
 ---
 
 <html lang="en">
@@ -27,23 +28,7 @@ import Circles from "../components/circles.astro";
       <Undernav />
 
       <div id="forside">
-        <div class="container">
-          <img src="src/img/baggrund.png" alt="" />
-          <div class="circle">
-            <div class="circleText">
-              <p>Wednesday</p>
-              <p>11-20</p>
-              <p>Thursday</p>
-              <p>11-20</p>
-              <p>Friday</p>
-              <p>11-20</p>
-              <p>saturday</p>
-              <p>11-20</p>
-              <p>sunday</p>
-              <p>11-20</p>
-            </div>
-          </div>
-        </div>
+<OpenTimesSection/>
         <div class="linje"></div>
       </div>
     </header>
@@ -84,39 +69,7 @@ import Circles from "../components/circles.astro";
     margin: 0;
     padding: 0;
   }
-  .container {
-    position: relative;
-  }
-  .circle {
-    width: 27vw;
-    height: 27vw;
-    outline: 1vw solid red;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: grid;
-    place-items: center;
-  }
-
-  .circleText {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    column-gap: 2rem;
-    font-size: 24px;
-    font-weight: bold;
-    top: 8rem;
-    left: 2.2rem;
-  }
-  .circleText p {
-    font-family: "aviano-sans", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: #526baf;
-    font-size: 2vw;
-  }
+ 
 
   p {
     font-family: "raleway", sans-serif;
@@ -220,24 +173,5 @@ import Circles from "../components/circles.astro";
       gap: rem;
     }
   }
-  @media (max-width: 900px) {
-    .circle {
-      border-radius: 50%;
-      background-color: white;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    .circleText {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 1 rem;
 
-      font-weight: bold;
-
-      top: 2rem;
-      left: 0.6rem;
-    }
-  }
 </style>
