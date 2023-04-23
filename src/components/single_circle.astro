@@ -1,0 +1,57 @@
+---
+const { firstColor, secondColor } = Astro.props;
+---
+
+<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M1.5299e-06 17.5C2.37484e-06 7.83501 7.83502 -2.37484e-06 17.5 -1.5299e-06C27.165 -6.84959e-07 35 7.83502 35 17.5C35 27.165 27.165 35 17.5 35C7.83502 35 6.84959e-07 27.165 1.5299e-06 17.5Z"
+    fill={firstColor}></path>
+  <path d="M11 17.5C11 13.9101 13.9102 11 17.5 11C21.0899 11 24 13.9101 24 17.5C24 21.0898 21.0899 24 17.5 24C13.9102 24 11 21.0898 11 17.5Z" fill={secondColor}></path>
+</svg>
+
+<style>
+  svg {
+    aspect-ratio: 1;
+    object-fit: contain;
+    position: absolute;
+    right: 0;
+    transform: translateX(20vw);
+    animation: scroll 10s linear infinite;
+  }
+  @keyframes scroll {
+    100% {
+      transform: translateX(-100vw);
+    }
+  }
+  @media(min-width:1000px){
+/*     svg{
+        animation-duration: 20s;
+    } */
+  }
+</style>
+<script>
+  let rndm = Math.random();
+  console.log(Math.floor(rndm * 9));
+  let darkColor = [
+    "var(--medium_blue)",
+    "var(--dark_blue)",
+    "var( --mustard)",
+    "var(--slime_green)",
+    "var(--bright_red)",
+  ];
+  let lightColor = [
+    "var(--pale_pink)",
+    "var(--blueish_grey)",
+    "var(--pale_violet)",
+    "var(--light_beige)"
+  ];
+  document.querySelectorAll("svg").forEach(vector => {  vector.addEventListener("animationstart", colorShift);;
+  vector.addEventListener("animationiteration", colorShift);
+})
+  document.querySelector("svg")
+  function colorShift(){
+    this.children[0].style.fill = darkColor.at(Math.floor(Math.random() * 5));
+    this.children[1].style.fill = lightColor.at(Math.floor(Math.random() * 3));
+}
+
+</script>

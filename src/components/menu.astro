@@ -11,7 +11,6 @@ import Logo from "./logo.astro";
   </div>
   <nav>
     <a href="tasting_events.html">Events & Tastings</a>
-    <a href="products.html">Products</a>
     <a href="about_us.html">About Us</a>
   </nav>
 </div>
@@ -81,6 +80,7 @@ import Logo from "./logo.astro";
   @media (min-width: 1100px) {
     #menu_container {
       display: flex;
+background-color: var(--bright_red);
     }
     #burger_button {
       display: none;
@@ -89,7 +89,7 @@ import Logo from "./logo.astro";
       transform: translateX(0%);
       position: static;
       display: flex;
-      width: 40%;
+      width: 20%;
       justify-content: space-around;
       gap: 2rem;
       background-color: unset;
@@ -98,16 +98,17 @@ import Logo from "./logo.astro";
       margin-right: 1.25rem;
     }
     a {
-      color: var(--bright_red);
+      color: var(--light_beige);
       font-size: clamp(0.7rem, 1.15vw, 1rem);
-      border: 3px solid var(--bright_red);
+      border: 3px solid var(--light_beige);
       padding: 0.75rem;
       transition: all 0.2s ease-in-out;
+      background-color: var(--bright_red);
     }
     a:hover {
       transform: scale(1.1);
-      background-color: var(--bright_red);
-      color: var(--light_beige);
+      background-color: var(--light_beige);
+      color: var(--bright_red);
     }
   }
 </style>
