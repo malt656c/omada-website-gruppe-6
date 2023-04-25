@@ -34,7 +34,7 @@ import InteractiveAnimation from "../components/InteractiveAnimation.astro";
     <p>A tour de force in natural wine with some of our high-end cuvées and rare vintages, curated from our cellar. Approximately 1-2 hours.</p>
     <span>DKK 499,- per person (with snacks +75,-)</span>
   </div>
-  <!-- book tasting  -->
+  <InteractiveAnimation interaction="click" name="background" />
 </div>
 <h2>private functions</h2>
 <div class="box">
@@ -121,13 +121,5 @@ import InteractiveAnimation from "../components/InteractiveAnimation.astro";
     span {
       font-size: 15px;
     }
-  }
-
-  lottie-player {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    margin-bottom: 10%;
   }
 </style>
