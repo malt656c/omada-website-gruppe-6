@@ -1,43 +1,31 @@
 ---
-// Eksponer props
 interface Props {
   name: string;
   interaction: string;
 }
-//Få props
+
 const { name, interaction } = Astro.props;
 
-//Sammensæt src link fra props
 const link = `./assets/${name}.json`;
 ---
 
-<!-- Importer LottieFiles (igen bemærk is:inline) -->
 <script is:inline src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<!-- Importer også biblioteket til interaktive LottieFiles -->
+
 <script is:inline src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 
-<!-- Tilføj Lottie player -->
 <lottie-player class="interactive_animation" src={link} data-interaction={interaction}></lottie-player>
 
-<!-- Tilføj interaction -->
 <script>
-  //Få et array med all elementer med "interactive_animation" klassen
   const interactiveAnimations = document.querySelectorAll(".interactive_animation");
 
-  //For hver element i arrayet
   interactiveAnimations.forEach((element) => {
-    //Få interaction data fra dataset property
     const interaction = element.dataset.interaction;
 
-    //Lav en animation ved at bruge LottieInteractivity objektet
     LottieInteractivity.create({
-      //Vælg elementet der skal være interaktivt
       player: element,
-      //Sæt at det skal være musen der lyttes efter
       mode: "cursor",
       actions: [
         {
-          //Sæt hvilken slagt interaktion (hover, click eller toggles)
           type: interaction,
           forceFlag: false,
         },
@@ -46,7 +34,6 @@ const link = `./assets/${name}.json`;
   });
 </script>
 
-<!-- Style player -->
 <style>
   lottie-player {
     width: 300px;
