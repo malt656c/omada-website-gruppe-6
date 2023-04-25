@@ -1,4 +1,5 @@
 ---
+import InteractiveAnimation from "../components/InteractiveAnimation.astro";
 ---
 
 <head>
@@ -15,19 +16,7 @@
     <p>including 6 tasting glasses.</p>
     <p>Check out this page, subscribe to our newsletter or social media for upcoming dates.</p>
   </div>
-  <lottie-player id="lottie" src="https://lottie.host/c382e14f-0221-4275-a0d9-a5f329be4b21/KuNeOrbK0z.json" background="transparent" speed="1" style="width: 300px; height: 59px;" autoplay></lottie-player>
-  <!-- <script>
-    LottieInteractivity.create({
-      player: "#lottie",
-      mode: "cursor",
-      actions: [
-        {
-          type: "click",
-          forceFlag: false,
-        },
-      ],
-    });
-  </script> -->
+  <InteractiveAnimation interaction="click" name="background" />
 </div>
 <h2>private tastings</h2>
 <div class="box">
