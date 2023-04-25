@@ -2,6 +2,7 @@
 ---
 <head>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 </head>
 <h2>public tastings</h2>
 <div class="box">
@@ -13,8 +14,19 @@
     <p>including 6 tasting glasses.</p>
     <p>Check out this page, subscribe to our newsletter or social media for upcoming dates.</p>
   </div>
-  <lottie-player class="lottie-player" src="https://lottie.host/c382e14f-0221-4275-a0d9-a5f329be4b21/KuNeOrbK0z.json"  background="transparent"  speed="1"  style="width: 300px; height: 59px;"   ></lottie-player>
-
+  <lottie-player id="lottie" src="https://lottie.host/c382e14f-0221-4275-a0d9-a5f329be4b21/KuNeOrbK0z.json"  background="transparent"  speed="1"  style="width: 300px; height: 59px;"   ></lottie-player>
+  <script>
+    LottieInteractivity.create({
+        player:'#lottie',
+        mode:"cursor",
+        actions: [
+            {
+                type: "click",
+                forceFlag: false
+            }
+        ]
+    });
+    </script>
 </div>
 <h2>private tastings</h2>
 <div class="box">
