@@ -1,0 +1,48 @@
+---
+import Logo from "./logo.astro";
+---
+
+<footer>
+  <Logo />
+  <div id="footerP">
+    <p>Øster Farimagsgade 26, 2100 København</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    margin-top: 5%;
+    background-color: #1a2c38;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  @media (min-width: 1084px) {
+    footer {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  #footerP {
+    color: white;
+    font-family: "raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    margin-top: 5%;
+    line-height: 150%;
+  }
+
+  #footerP a {
+    color: white;
+    font-family: "raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    margin-top: 5%;
+    text-decoration: none;
+  }
+</style>
