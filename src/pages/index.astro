@@ -11,6 +11,7 @@ import NewsAndEventsSection from "../components/newsAndEventsSection.astro";
 import Footer from "../components/footer.astro";
 import TestimonialDisplay from "../components/testimonial_display.astro";
 import TestimonialForm from "../components/testimonial_form.astro";
+import Arrow from "../components/arrow.astro";
 ---
 
 <html lang="en">
@@ -21,7 +22,8 @@ import TestimonialForm from "../components/testimonial_form.astro";
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/mku2eml.css" />
-    <link rel="stylesheet" href="/public/style.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <meta name="robots" content="noindex" />
     <title>Omada Wine & Deli</title>
   </head>
   <body>
@@ -30,12 +32,13 @@ import TestimonialForm from "../components/testimonial_form.astro";
       <h1>Omada Wine & Deli</h1>
       <Circles />
       <Undernav />
+      <Arrow />
       <OpenTimesSection />
       <Linje />
     </header>
     <main>
       <NewsAndEventsSection />
-      <TestimonialDisplay/>
+      <TestimonialDisplay />
       <Cirkler />
       <div id="Produkter">
         <h2 class="Deli">DELI GOODS</h2>
@@ -45,10 +48,10 @@ import TestimonialForm from "../components/testimonial_form.astro";
       </div>
       <Deligoods />
       <Cirkler />
-      <TestimonialForm/>
+      <TestimonialForm />
       <Slider />
     </main>
-    <Footer/>
+    <Footer />
   </body>
 </html>
 

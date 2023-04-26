@@ -1,0 +1,43 @@
+---
+---
+
+<div>
+  <a href="/#opentimes">&#11167;</a>
+</div>
+
+<style>
+  div {
+    --button_size: 5rem;
+    height: var(--button_size);
+    width: var(--button_size);
+    background-color: var(--medium_blue);
+    border-radius: 50%;
+    margin: auto;
+    margin-block: 2rem;
+    display: grid;
+    place-items: center;
+    animation: jump 0.6s ease-in-out 10s 3 forwards;
+  }
+  a {
+    color: var(--light_beige);
+    text-decoration: none;
+    font-size: calc(var(--button_size) - 2rem);
+    line-height: 0;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 1;
+  }
+
+  @keyframes jump {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+</style>
