@@ -6,17 +6,17 @@ interface Props {
 
 const { name, interaction } = Astro.props;
 
-const link = `./assets/${name}.json`;
+const link = `/assets/${name}.json`;
 ---
 
 <script is:inline src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 <script is:inline src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 
-<lottie-player class="interactive_animation" src={link} data-interaction={interaction}></lottie-player>
+<lottie-player id="interactive_animation" src={link} data-interaction={interaction}></lottie-player>
 
 <script>
-  const interactiveAnimations = document.querySelectorAll(".interactive_animation");
+  const interactiveAnimations = document.querySelectorAll("#interactive_animation");
 
   interactiveAnimations.forEach((element) => {
     const interaction = element.dataset.interaction;
