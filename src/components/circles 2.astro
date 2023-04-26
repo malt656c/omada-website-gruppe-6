@@ -1,0 +1,32 @@
+---
+import SingleCircle from "./single_circle.astro";
+---
+
+<div class="circle_track">
+  <SingleCircle/>
+  <SingleCircle/>
+  <SingleCircle/>
+  <SingleCircle/>
+  <SingleCircle/>
+  <SingleCircle/>
+  <SingleCircle/>
+  <SingleCircle/>
+  <SingleCircle/>
+  <SingleCircle/>
+</div>
+<style>
+  .circle_track {
+    width: 100vw;
+    display: flex;
+    height: 35px;
+    overflow-x: hidden;
+  }
+</style>
+<script>
+  const track = document.querySelector(".circle_track");
+  console.log(track.children);
+  for (let step = 0; step < track.children.length; step++) {
+    let billede = track.children[step];
+    billede.style.animationDelay = step * 1 + "s";
+  }
+</script>
