@@ -1,0 +1,47 @@
+---
+interface Props {
+  name: string;
+  interaction: string;
+}
+
+const { name, interaction } = Astro.props;
+
+const link = `./assets/${name}.json`;
+---
+
+<script is:inline src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<script is:inline src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+
+<lottie-player class="interactive_animation" src={link} data-interaction={interaction}></lottie-player>
+
+<script>
+  const interactiveAnimations = document.querySelectorAll(".interactive_animation");
+
+  interactiveAnimations.forEach((element) => {
+    const interaction = element.dataset.interaction;
+
+    LottieInteractivity.create({
+      player: element,
+      mode: "cursor",
+      actions: [
+        {
+          type: interaction,
+          forceFlag: false,
+        },
+      ],
+    });
+  });
+</script>
+
+<style>
+  lottie-player {
+    width: 300px;
+    height: 59px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    margin-bottom: 10%;
+  }
+</style>

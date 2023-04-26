@@ -8,8 +8,10 @@ import Circles from "../components/circles.astro";
 import OpenTimesSection from "../components/openTimesSection.astro";
 import Linje from "../components/linje.astro";
 import NewsAndEventsSection from "../components/newsAndEventsSection.astro";
-import Wines from "../components/wines.astro";
-import BarLinje from "../components/bar_linje.astro";
+import Footer from "../components/footer.astro";
+import TestimonialDisplay from "../components/testimonial_display.astro";
+import TestimonialForm from "../components/testimonial_form.astro";
+import Arrow from "../components/arrow.astro";
 ---
 
 <html lang="en">
@@ -20,7 +22,8 @@ import BarLinje from "../components/bar_linje.astro";
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/mku2eml.css" />
-    <link rel="stylesheet" href="/public/style.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <meta name="robots" content="noindex" />
     <title>Omada Wine & Deli</title>
   </head>
   <body>
@@ -29,11 +32,13 @@ import BarLinje from "../components/bar_linje.astro";
       <h1>Omada Wine & Deli</h1>
       <Circles />
       <Undernav />
+      <Arrow />
       <OpenTimesSection />
       <Linje />
     </header>
     <main>
       <NewsAndEventsSection />
+      <TestimonialDisplay />
       <Cirkler />
       <div id="Produkter">
         <h2 class="Deli">DELI GOODS</h2>
@@ -43,13 +48,11 @@ import BarLinje from "../components/bar_linje.astro";
       </div>
       <Deligoods />
       <Cirkler />
+      <TestimonialForm />
+      <Slider />
     </main>
-    <Slider />
+    <Footer />
   </body>
-  <footer>
-    <Wines />
-    <BarLinje />
-  </footer>
 </html>
 
 <style>

@@ -4,8 +4,7 @@ import Tastingeventsheader from "../components/tastingeventsheader.astro";
 import Eventscontent from "../components/eventscontent.astro";
 import Circles from "../components/circles.astro";
 import Undernav from "../components/Undernav.astro";
-import Wines from "../components/wines.astro";
-import BarLinje from "../components/bar_linje.astro";
+import Footer from "../components/footer.astro";
 ---
 
 <html lang="en">
@@ -17,7 +16,8 @@ import BarLinje from "../components/bar_linje.astro";
     <meta name="robots" content="noindex" />
     <link rel="stylesheet" href="https://use.typekit.net/qti3pmw.css" />
     <link rel="stylesheet" href="https://use.typekit.net/qti3pmw.css" />
-    <link rel="stylesheet" href="/public/style.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <meta name="robots" content="noindex" />
   </head>
 
   <body>
@@ -30,9 +30,6 @@ import BarLinje from "../components/bar_linje.astro";
     <main>
       <Eventscontent />
     </main>
+    <Footer />
   </body>
-  <footer>
-    <Wines />
-    <BarLinje />
-  </footer>
 </html>
