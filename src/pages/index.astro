@@ -8,6 +8,9 @@ import Circles from "../components/circles.astro";
 import OpenTimesSection from "../components/openTimesSection.astro";
 import Linje from "../components/linje.astro";
 import NewsAndEventsSection from "../components/newsAndEventsSection.astro";
+import Footer from "../components/footer.astro";
+import TestimonialDisplay from "../components/testimonial_display.astro";
+import TestimonialForm from "../components/testimonial_form.astro";
 ---
 
 <html lang="en">
@@ -32,6 +35,7 @@ import NewsAndEventsSection from "../components/newsAndEventsSection.astro";
     </header>
     <main>
       <NewsAndEventsSection />
+      <TestimonialDisplay/>
       <Cirkler />
       <div id="Produkter">
         <h2 class="Deli">DELI GOODS</h2>
@@ -41,8 +45,10 @@ import NewsAndEventsSection from "../components/newsAndEventsSection.astro";
       </div>
       <Deligoods />
       <Cirkler />
+      <TestimonialForm/>
+      <Slider />
     </main>
-    <Slider />
+    <Footer/>
   </body>
 </html>
 
